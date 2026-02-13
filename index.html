@@ -47,27 +47,30 @@
       class="relative z-10 max-w-md mx-auto min-h-screen bg-black/90 shadow-2xl pb-40 border-x border-zinc-800"
     >
       <header
-        class="pt-12 pb-8 px-6 flex flex-col items-center text-center bg-gradient-to-b from-primary/20 to-transparent"
+        class="pt-10 pb-6 px-6 flex flex-col items-center text-center bg-gradient-to-b from-primary/20 to-transparent"
       >
-        <div class="mb-6 relative">
-          <div
-            class="w-28 h-28 rounded-full bg-black border-4 border-accent shadow-[0_0_20px_rgba(217,4,41,0.5)] overflow-hidden relative z-10"
-          >
+        <div class="mb-5 relative">
+          <div class="logo-container">
             <img
-              src="assets/img/logo/logo.png"
-              alt="El Gordito"
-              class="w-full h-full object-cover"
+              src="assets/img/logo/logo-el-gordito-removebg-preview.png"
+              alt="Logo El Gordito"
+              class="logo-img"
+              onerror="
+                this.src =
+                  'https://placehold.co/200x200/000000/D90429?text=Gordito'
+              "
             />
           </div>
+
           <div
-            class="absolute -bottom-2 -right-2 bg-accent text-black font-display text-[10px] px-2 py-1 rounded shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] -rotate-6 z-20 border border-black"
+            class="absolute -bottom-1 -right-1 bg-accent text-black font-display text-[9px] px-2 py-0.5 rounded shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] -rotate-6 z-20 border border-black"
           >
             EST. 2026
           </div>
         </div>
 
         <h1
-          class="text-5xl font-display text-primary leading-none text-outline transform -rotate-2"
+          class="text-4xl font-display text-primary leading-none text-outline transform -rotate-2"
         >
           EL GORDITO
         </h1>
