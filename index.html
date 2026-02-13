@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Gordito - Menú Digital</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#D90429", // El "rojo fuerte" que pidió el cliente
+              accent: "#FFC300", // Amarillo para detalles como en el logo
+              dark: "#0A0A0A",
+            },
+            fontFamily: {
+              display: ["Carter One", "cursive"],
+              body: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-dark text-white font-body antialiased selection:bg-primary/30"
+  >
+    <div
+      class="fixed inset-0 pointer-events-none opacity-20 bg-wood-pattern z-0 mix-blend-overlay"
+    ></div>
+
+    <main
+      class="relative z-10 max-w-md mx-auto min-h-screen bg-black/90 shadow-2xl pb-40 border-x border-zinc-800"
+    >
+      <header
+        class="pt-12 pb-8 px-6 flex flex-col items-center text-center bg-gradient-to-b from-primary/20 to-transparent"
+      >
+        <div class="mb-6 relative">
+          <div
+            class="w-28 h-28 rounded-full bg-black border-4 border-accent shadow-[0_0_20px_rgba(217,4,41,0.5)] overflow-hidden relative z-10"
+          >
+            <img
+              src="assets/img/logo/logo.png"
+              alt="El Gordito"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            class="absolute -bottom-2 -right-2 bg-accent text-black font-display text-[10px] px-2 py-1 rounded shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] -rotate-6 z-20 border border-black"
+          >
+            EST. 2026
+          </div>
+        </div>
+
+        <h1
+          class="text-5xl font-display text-primary leading-none text-outline transform -rotate-2"
+        >
+          EL GORDITO
+        </h1>
+        <p
+          class="text-accent text-[10px] font-bold tracking-[0.3em] uppercase mt-2"
+        >
+          Sabores 100% Magdalena de Cao
+        </p>
+      </header>
+
+      <div
+        class="sticky top-0 z-40 bg-black/95 backdrop-blur-md border-y border-zinc-800 py-3"
+      >
+        <div
+          id="filter-bar"
+          class="flex flex-nowrap overflow-x-auto px-4 gap-3 scrollbar-hide"
+        >
+          <button
+            data-category="todos"
+            class="filter-btn bg-primary text-white flex-shrink-0"
+          >
+            TODOS
+          </button>
+          <button
+            data-category="alitas"
+            class="filter-btn bg-zinc-800 text-gray-400 flex-shrink-0"
+          >
+            ALITAS
+          </button>
+          <button
+            data-category="pollos"
+            class="filter-btn bg-zinc-800 text-gray-400 flex-shrink-0"
+          >
+            POLLOS
+          </button>
+          <button
+            data-category="parrillas"
+            class="filter-btn bg-zinc-800 text-gray-400 flex-shrink-0"
+          >
+            PARRILLAS
+          </button>
+          <button
+            data-category="especiales"
+            class="filter-btn bg-zinc-800 text-gray-400 flex-shrink-0"
+          >
+            ESPECIALES
+          </button>
+          <button
+            data-category="hamburguesas"
+            class="filter-btn bg-zinc-800 text-gray-400 flex-shrink-0"
+          >
+            BURGERS
+          </button>
+        </div>
+      </div>
+
+      <div class="px-6 my-8 flex items-center gap-4">
+        <div class="h-px bg-zinc-800 flex-grow"></div>
+        <h2
+          id="current-category"
+          class="text-2xl font-display text-white italic"
+        >
+          Nuestro <span class="text-primary">Menú</span>
+        </h2>
+        <div class="h-px bg-zinc-800 flex-grow"></div>
+      </div>
+
+      <div id="menu-container" class="px-6 space-y-6"></div>
+
+      <nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-6 z-50">
+        <button
+          class="w-full bg-primary hover:bg-red-700 text-white py-4 rounded-xl shadow-[5px_5px_0px_0px_#FFC300] border-2 border-black flex items-center justify-center gap-3 active:translate-y-1 transition-all"
+        >
+          <span class="material-symbols-outlined">notifications_active</span>
+          <div class="text-left">
+            <p class="font-display text-xl leading-none">¡LLAMA AL MESERO!</p>
+            <p class="text-[10px] font-bold uppercase opacity-80">
+              Para hacer tu pedido
+            </p>
+          </div>
+        </button>
+      </nav>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

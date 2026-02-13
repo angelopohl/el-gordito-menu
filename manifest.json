@@ -1,0 +1,15 @@
+{
+  "name": "El Gordito Menu",
+  "short_name": "Gordito",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#D90429",
+  "icons": [
+    {
+      "src": "assets/img/logo/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+/* --- CONFIGURACIÓN DE FUENTES --- */
+/* Fallback: Si no tienes los archivos en /fonts, el sistema usará Google Fonts del HTML */
+@font-face {
+  font-family: "Carter One";
+  src: url("../fonts/CarterOne-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- VARIABLES DE MARCA --- */
+:root {
+  --primary: #d90429; /* Rojo Fuerte solicitado */
+  --accent: #ffc300; /* Amarillo/Dorado del logo */
+  --bg-dark: #0a0a0a; /* Negro profundo para el fondo */
+}
+
+/* --- ESTILOS DE ESTRUCTURA --- */
+body {
+  background-color: var(--bg-dark);
+  overflow-x: hidden;
+}
+
+/* Textura de Madera Oscura */
+.bg-wood-pattern {
+  background-image: url("../assets/img/ui/dark-wood.png");
+  background-repeat: repeat;
+}
+
+/* El "Contorno" de texto que da el estilo de impacto */
+.text-outline {
+  text-shadow:
+    2px 2px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+/* --- CATEGORÍAS (SCROLL HORIZONTAL) --- */
+#filter-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
+}
+
+.filter-btn {
+  flex: 0 0 auto; /* Importante: evita que los botones se encojan */
+  white-space: nowrap; /* Evita que el texto salte de línea */
+  font-family: "Carter One", cursive;
+  padding: 0.5rem 1.25rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-radius: 0.5rem;
+  transition:
+    transform 0.1s ease,
+    background-color 0.2s;
+  border: 2px solid transparent;
+}
+
+.filter-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- ELEMENTOS DE PRODUCTO --- */
+
+/* Imágenes ovaladas fieles al volante original */
+.img-oval {
+  clip-path: ellipse(50% 45% at 50% 50%);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s;
+}
+
+/* Efecto visual al pasar el dedo/mouse */
+.group:hover .img-oval {
+  transform: scale(1.05);
+  border-color: var(--primary);
+}
+
+/* --- UTILIDADES --- */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animación de entrada para los platos */
+.animate-in {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
