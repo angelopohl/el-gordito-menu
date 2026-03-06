@@ -153,3 +153,18 @@ body {
     transform: skewX(-25deg);
     animation: shine 4s infinite;
 }
+
+/* --- COMPORTAMIENTO DEL CARRUSEL DE PROMOS --- */
+#promo-slider {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important; /* Fuerza el ajuste uno por uno */
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+#promo-slider > div {
+    scroll-snap-align: center !important; /* Alinea cada cartel al centro */
+    flex-shrink: 0;
+    width: 100%;
+}
