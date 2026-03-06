@@ -130,3 +130,26 @@ body {
     transform: translateY(0);
   }
 }
+
+/* EFECTO DE BRILLO PARA PRECIOS */
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.bg-accent, .bg-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-accent::after, .bg-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-25deg);
+    animation: shine 4s infinite;
+}

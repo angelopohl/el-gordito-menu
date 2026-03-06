@@ -184,6 +184,25 @@ const menuData = [
     categoria: "bebidas",
     descripcion: "Té, manzanilla o anís para cerrar bien la comida.",
   },
+  // En data.js, actualiza los objetos de promos:
+{ 
+  id: 30, 
+  nombre: "Combo Alitas + Chaufa", 
+  categoria: "promos", 
+  descripcion: "¡COMBINACIÓN PERFECTA! Porción de alitas de cualquier sabor + porción de chaufa por solo 16 soles." 
+},
+{ 
+  id: 31, 
+  nombre: "Combo Choripán + Maracuyá", 
+  categoria: "promos", 
+  descripcion: "Choripán parrillero + vaso de jugo de maracuyá heladito por solo 6 soles." 
+},
+{ 
+  id: 32, 
+  nombre: "Mostrito + Bebida", 
+  categoria: "promos", 
+  descripcion: "¡EL FAVORITO! Mostrito de la casa acompañado de una Pepsi chiquita o un vaso de maracuyá heladito por solo 15 soles." 
+},
 ];
 
 export default menuData;
